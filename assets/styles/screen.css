@@ -11,11 +11,20 @@ P {
   font-size: 18px;
   font-family: Georgia, "Times New Roman", Cambria, serif;
 }
+ul {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Cambria, serif;
+}
 .brand {
   text-align: center;
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+.me {
+  width: 200px;
+  margin: 0 auto 20px auto;
+  display: block;
 }
 #home p {
   margin: 20px 0;
@@ -27,6 +36,8 @@ P {
 #home .posts {
   list-style: none;
   padding-left: 0;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #home .posts li {
   margin-bottom: 10px;
