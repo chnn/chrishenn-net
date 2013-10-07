@@ -6,12 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
 
-        <link rel="stylesheet" href="/assets/styles/syntax.css">
-        <link rel="stylesheet" href="/assets/styles/screen.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/syntax.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/screen.css">
     </head>
     <body>
+            <header>
+                <div class="brand"><a href="http://chrishenn.net/writing/">chrishenn.net/writing</a></div>
+            </header>
         <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-            <div class="brand"><a href="http://writing.chrishenn.net/">writing.chrishenn.net</a></div>
             {{ content }}
         </div>
     </body>

@@ -1,3 +1,4 @@
-name: writing.chrishenn.net
+baseurl: /writing
+permalink: /:title.html
 markdown: redcarpet
 pygments: true
