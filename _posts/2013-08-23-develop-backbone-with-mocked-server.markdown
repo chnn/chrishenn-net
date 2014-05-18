@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Mocking a server for Backbone applications with Sinon.JS"
-date: 2013-08-23
+layout: post
 ---
 
 It's not always clear how a [Backbone](http://backbonejs.org/) application will interact with a server during the early stages of it's development process. If you are a front-end oriented developer, you might take the "resource" aspect of an application for granted, leaving the server/api interaction in your application to be implemented last. A more optimal development process would take the persistence functionality into account from the start. 
@@ -14,8 +13,7 @@ Sinon.JS is a standalone library that provides test spies, stubs, and mocks. Exc
 
 Lets say we have a model and a collection:
 
-{% highlight coffeescript %}
-
+```coffeescript
 class WidgetModel extends Backbone.Model
 
 
@@ -25,14 +23,14 @@ class WidgetsCollection extends Backbone.Collection
 
   url: '/api/widgets'
 
-{% endhighlight %}
+```
 
 Per the [Backbone CRUD mappings](http://backbonejs.org/#Sync), fetching the `WidgetsCollection` would make a `GET` request to `/api/widgets`. A specific model could be retrieved from `/api/widgets/[id]`, and a model could be created by `POST`ing to `/api/widgets`.
 
 Let's make a fake database with some nested objects:
 
-{% highlight coffeescript %}
 
+```coffeescript
 database = {
   widgets: [
     {
@@ -44,25 +42,21 @@ database = {
     }
   ]
 }
-
-{% endhighlight %}
+```
 
 Yeah, not exactly big data. Now we can create a fake server with Sinon.JS that uses this data to respond to requests:
 
-{% highlight coffeescript %}
-
+```coffeescript
 server = sinon.fakeServer.create()
 server.autoRespond = true
 server.autoRespondAfter = 400
-
-{% endhighlight %}
+```
 
 I set the `autoRespond` flag so that when the server receives a request, it will automatically respond. Otherwise you have to run `server.respond()` after every request you make (like a `WidgetCollection.fetch()`, for example.) I also added a delay, which forces you to face the fact that things happen asynchronously in your web application.
 
 Now, to make the server to respond to a `GET` on the collection, we can do this:
 
-{% highlight coffeescript %}
-
+```coffeescript
 server.respondWith('GET', '/api/widgets',
   [
     200
@@ -70,13 +64,11 @@ server.respondWith('GET', '/api/widgets',
     JSON.stringify(database.widgets)
   ]
 )
-
-{% endhighlight %}
+```
 
 Creating a new model on your fake server requires a little more:
 
-{% highlight coffeescript %}
-
+```coffeescript
 server.respondWith('POST', '/api/widgets', (request) ->
   widget = JSON.parse(request.requestBody)
   widget.id = (new Date()).getTime()  # Ghetto id creation
@@ -89,8 +81,7 @@ server.respondWith('POST', '/api/widgets', (request) ->
     JSON.stringify(widget)
   )
 )
-
-{% endhighlight %}
+```
 
 Models created by Backbone don't have IDs, only a "client" id (cid.) Syncing a model with the server for the first time should create an ID, so that's what `(new Date()).getTime()` is doing. Hopefully your real server has a better process for assigning IDs :)
 

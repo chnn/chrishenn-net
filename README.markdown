@@ -1,4 +1,4 @@
-Here I store the writing for my personal site, viewable at [writing.chrishenn.net](http://writing.chrishenn.net).
+Here I store the writing for my personal site, viewable at [chrishenn.net/writing](chrishenn.net/writing).
 
 HTML is generated using [Jekyll](http://jekyllrb.com/). Also uses some of the [Bootstrap](http://getbootstrap.com/) CSS.
 

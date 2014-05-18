@@ -1,4 +1,4 @@
 baseurl: /writing
 permalink: /:title.html
+highlighter: pygments
 markdown: redcarpet
-pygments: true

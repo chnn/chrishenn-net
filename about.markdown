@@ -19,4 +19,4 @@ I write here for a few reasons:
 
 This site is generated using [Jekyll](http://jekyllrb.com) and is served by [DigitalOcean](https://www.digitalocean.com/?refcode=1e64afc35633) (there's a ref code in that link.) It lives in a Git repository available [here](https://github.com/chenn/writing).
 
-You can contact me at chris@chrishenn.net. I'm also on [GitHub account](https://github.com/chenn).
+You can contact me at chris@chrishenn.net. I'm also on [GitHub](https://github.com/chenn).
