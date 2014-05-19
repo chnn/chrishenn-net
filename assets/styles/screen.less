@@ -3,6 +3,10 @@
 
 @import "bootstrap.min.css";
 
+@sans: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+@serif: Georgia, serif;
+@mono: Monaco, Menlo, Consolas, "Courier New", monospace;
+
 @wetAsphalt: #34495e;
 @peterRiver: #3498db;
 @belizeHole: #2980b9;
@@ -12,29 +16,38 @@
 @pumpkin: #d35400;
 @alizarin: #e74c3c;
 
-h2 {
+h1 {
+    font-family: @serif;
     font-weight: 700;
     text-align: center;
+    line-height: 140%;
     margin-top: 10px;
 }
 
 P {
     font-size: 18px;
-    font-family: Georgia, "Times New Roman", Cambria, serif;
+    font-family: @sans;
+    line-height: 140%;
+    margin-bottom: 18px
 }
 
 ul {
     font-size: 18px;
-    font-family: Georgia, "Times New Roman", Cambria, serif;
+    font-family: @sans;
+    margin-bottom: 18px;
 }
 
 pre, code {
     font-size: 13px;
 }
 
+pre {
+    margin-bottom: 18px;
+}
+
 .brand {
     text-align: center;
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-family: @mono;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -46,13 +59,14 @@ pre, code {
 }
 
 .content-container {
-    max-width: 650px;
+    max-width: 700px;
     padding: 20px;
     margin: 0 auto;
 }
 
 #home {
     h2 {
+        font-family: @sans;
         margin-top: 30px;
         margin-bottom: 20px;
     }
@@ -60,7 +74,7 @@ pre, code {
         list-style: none;
         padding-left: 0;
         font-size: 14px;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: @sans;
         li {
             margin-bottom: 10px;
         }
@@ -70,14 +84,11 @@ pre, code {
 .post {
     margin-bottom: 80px;
     .date {
+        font-family: @sans;
         font-size: 14px;
         font-weight: 300;
-        margin-top: 10px;
-        margin-bottom: 15px;
+        margin: 15px auto;
         text-align: center;
         font-style: italic;
-    }
-    h2 {
-        // font-size: 24px;
     }
 }
