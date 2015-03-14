@@ -3,6 +3,10 @@ layout: post
 title: "Implementing Services in an Ember.js Application"
 ---
 
+**Warning**: These examples are now out of date. Check out the new [injection](http://emberjs.com/blog/2015/02/07/ember-1-10-0-released.html#toc_injected-properties) API available in Ember 1.10.
+
+<hr>
+
 The following examples assume your project uses [ember-cli](https://github.com/stefanpenner/ember-cli). Names of files and objects will be a little different if you're working in globals mode.
 
 Define the service in the file `app/services/myservice.js`:
