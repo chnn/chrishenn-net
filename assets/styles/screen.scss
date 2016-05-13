@@ -3,37 +3,37 @@
 
 @import "bootstrap.min.css";
 
-@sans: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-@serif: Georgia, serif;
-@mono: Monaco, Menlo, Consolas, "Courier New", monospace;
+$sans: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+$serif: Georgia, serif;
+$mono: Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@wetAsphalt: #34495e;
-@peterRiver: #3498db;
-@belizeHole: #2980b9;
-@silver: #bdc3c7;
-@clouds: #ecf0f1;
-@carrot: #e67e22;
-@pumpkin: #d35400;
-@alizarin: #e74c3c;
+$wetAsphalt: #34495e;
+$peterRiver: #3498db;
+$belizeHole: #2980b9;
+$silver: #bdc3c7;
+$clouds: #ecf0f1;
+$carrot: #e67e22;
+$pumpkin: #d35400;
+$alizarin: #e74c3c;
 
 h1 {
-    font-family: @sans;
+    font-family: $sans;
     font-weight: 700;
     text-align: center;
     line-height: 140%;
     margin-top: 10px;
 }
 
-P {
+p {
     font-size: 18px;
-    font-family: @sans;
+    font-family: $sans;
     line-height: 140%;
     margin-bottom: 18px
 }
 
 ul {
     font-size: 18px;
-    font-family: @sans;
+    font-family: $sans;
     margin-bottom: 18px;
 }
 
@@ -52,7 +52,7 @@ iframe {
 
 .brand {
     text-align: center;
-    font-family: @mono;
+    font-family: $mono;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -71,15 +71,16 @@ iframe {
 
 #home {
     h2 {
-        font-family: @sans;
+        font-family: $sans;
         margin-top: 30px;
         margin-bottom: 20px;
     }
+
     .posts {
         list-style: none;
         padding-left: 0;
         font-size: 14px;
-        font-family: @sans;
+        font-family: $sans;
         li {
             margin-bottom: 10px;
         }
@@ -88,8 +89,9 @@ iframe {
 
 .post {
     margin-bottom: 80px;
+
     .date {
-        font-family: @sans;
+        font-family: $sans;
         font-size: 14px;
         font-weight: 300;
         margin: 15px auto;

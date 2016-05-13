@@ -1,4 +1,6 @@
 baseurl: /writing
 permalink: /:title.html
 highlighter: pygments
-markdown: redcarpet
+sass:
+    sass_dir: assets/styles
+    style: compressed
