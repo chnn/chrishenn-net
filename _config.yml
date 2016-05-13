@@ -1,6 +1,6 @@
 baseurl: /writing
 permalink: /:title.html
-highlighter: pygments
+highlighter: rouge
 sass:
     sass_dir: assets/styles
     style: compressed
