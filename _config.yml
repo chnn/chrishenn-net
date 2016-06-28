@@ -1,4 +1,4 @@
-baseurl: /writing
+baseurl: /
 permalink: /:title.html
 highlighter: rouge
 sass:
