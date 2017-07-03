@@ -5,10 +5,10 @@ title: Home
 
 <div id="home">
     <p>Hi, I'm Chris Henn. Maybe some day I'll start writing here more. You can contact me at chris@chrishenn.net. <small><a href="{{ site.baseurl }}/about.html">More &raquo;</a></small></p>
-  <h2>All Posts</h2>
-  <ul class="posts">
-    {% for post in site.posts %}
-        <li><span>{{ post.date | date_to_string }}</span> ~ <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+    <h2>All Posts</h2>
+    <ul class="posts">
+        {% for post in site.posts %}
+            <li><span>{{ post.date | date_to_string }}</span> ~ <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
 </div>

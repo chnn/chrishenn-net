@@ -3,7 +3,7 @@ layout: default
 title: About
 ---
 
-<img src="{{ site.baseurl }}/assets/me.jpg" class="me">
+<img src="{{ site.baseurl }}/assets/images/me.jpg" class="me">
 
 ## About
 
