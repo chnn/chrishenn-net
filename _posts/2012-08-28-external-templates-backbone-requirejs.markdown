@@ -59,7 +59,7 @@ RequireJS will load the file for you using the text plugin. You can split your t
 
 Loading templates with `text!` will work for any templating engine, of course. The previous example, with Handlebars instead of Underscore:
 
-```highlight coffeescript
+```coffeescript
 define ['dependencyA', 'backbone', 'handlebars', 'text!../path/to/template.html'], (DependencyA, Backbone, Handlebars, myTemplate) ->
 
     class ItemView extends Backbone.View

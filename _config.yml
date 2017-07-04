@@ -1,4 +1,4 @@
-permalink: /:title.html
+permalink: /posts/:title
 highlighter: rouge
 sass:
     sass_dir: assets/styles

@@ -9,7 +9,7 @@ For work I build a lot of data visualizations in Ember. Doing data visualization
 
 Here's the video:
 
-<iframe width="660" height="371" src="https://www.youtube-nocookie.com/embed/J-LpgGqyxcI?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="600" height="318" src="https://www.youtube-nocookie.com/embed/J-LpgGqyxcI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <script async class="speakerdeck-embed" data-id="8f3bada23d084c219eb4c44353ccee7f" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
