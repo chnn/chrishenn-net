@@ -23,17 +23,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="2554"
-     inkscape:window-height="1409"
+     inkscape:window-width="1914"
+     inkscape:window-height="1049"
      id="namedview4990"
      showgrid="false"
      inkscape:zoom="1.888"
-     inkscape:cx="415.59652"
-     inkscape:cy="217.01256"
+     inkscape:cx="288.47788"
+     inkscape:cy="301.75832"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g5095" />
   <defs
      id="defs2" />
   <metadata
@@ -290,7 +290,7 @@
          cx="310.79999"
          cy="109.2"
          id="circle5093"
-         style="stroke-width:1.28571433;stroke-miterlimit:4;stroke-dasharray:none" />
+         style="stroke-width:1.28571433;stroke-miterlimit:4;stroke-dasharray:none;fill:#00dc00;fill-opacity:1" />
     </g>
   </g>
 </svg>
