@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/screen.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/katex.min.css">
 
-        <script src="{{ site.baseurl }}/assets/js/jquery-3.2.1.slim.min.js"></script>
         <script src="{{ site.baseurl }}/assets/js/katex.min.js"></script>
     </head>
 
@@ -24,14 +23,12 @@
         </div>
 
         <script>
-            $("script[type='math/tex']").replaceWith(function() {
-                var tex = $(this).text();
-                return katex.renderToString(tex, { displayMode: false });
+            document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
+                el.outerHTML = katex.renderToString(el.textContent, { displayMode: false });
             });
 
-            $("script[type='math/tex; mode=display']").replaceWith(function() {
-                var tex = $(this).html();
-                return katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
+            document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
+                el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true });
             });
         </script>
 
