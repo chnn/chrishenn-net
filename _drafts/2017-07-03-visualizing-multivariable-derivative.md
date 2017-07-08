@@ -1,20 +1,22 @@
 ---
-title: Visualizing 2D vector fields and the multivariable derivative
+title: Visualizing multivariable functions and their derivative
 layout: post
 ---
+
+<div class="aside">
+  <p>This summer I'm working with <a href="http://blogs.reed.edu/projectproject/">Project Project</a>, a summer research group consisting of Henry Blanchette, Cameron Fish, Chris Henn, <a href="http://people.reed.edu/~ormsbyk/">Kyle Ormsby</a>, Lana Tollas, and Jalan Ziyad. Our goal is to visualize mathematical concepts; this post details some work with introductory calculus material.</p>
+</div>
 
 In a first course in calculus, many students encounter a image similar to the following:
 
 <div class="figure">
-  <img width="350px" src="{{ site.baseurl }}/assets/images/visualizing-multivariable-derivative/tangent.svg" />
-  <div class="caption">Image courtesy <a href="https://commons.wikimedia.org/wiki/File:Tangent-calculus.svg">Wikipedia</a>.</div>
+    <img width="350px" src="{{ site.baseurl }}/assets/images/derivative/tangent.svg" />
+    <div class="caption">Image courtesy <a href="https://commons.wikimedia.org/wiki/File:Tangent-calculus.svg">Wikipedia</a>.</div>
 </div>
 
-Such an illustration highlights a key property of the single variable derivative: it's the *best linear approximation* of a function at a point. For functions of more than one variable, the derivative exhibits this same characteristic, yet there is no obvious corresponding picture. What would an analogous visualization look like for a multivariable function?
+Such an illustration highlights a key property of the single variable derivative: it’s the *best linear approximation* of a function at a point. For functions of more than one variable, the derivative exhibits this same characteristic, yet there is no obvious corresponding picture.  What would an analogous visualization look like for a multivariable function?
 
-For the past few weeks, I've been working towards a visualization of multivariable functions and their derivatives. Check out the end result [here][3], or read on to hear about my process. I assume some knowledge of calculus and mathematical notation.
-
-[3]: http://demo.chrishenn.net
+For the past few weeks, I’ve been working towards a visualization of multivariable functions and their derivatives. Check out the end result [here](http://demo.chrishenn.net), or read on to hear about my process.  I assume some knowledge of calculus and mathematical notation.
 
 ## Visualizing vector fields in the plane
 
@@ -26,22 +28,22 @@ $$
 f(x,\ y) = \left( \frac{x^3 + y^3}{3}, \frac{x^3}{3} - y \right)
 $$
 
-What does $$f$$ look like? A common representation of such functions selects a uniform set of points in $$\mathbf{R}^2$$, and draws an arrow from each point to its new position under $$f$$:
+What does $$f$$ look like? A common representation of such functions selects a uniformly-spaced set of points in $$\mathbf{R}^2$$, and draws an arrow at each point representing the magnitude and direction of the vector field:
 
-<img width="300px" src="{{site.baseurl}}/assets/images/visualizing-multivariable-derivative/vector-field.svg" />
+<img width="300px" src="{{ site.baseurl }}/assets/images/derivative/vector-field.svg" />
 
-This is sometimes called a **vector plot**. For static mediums like a textbook or chalk board, this is a intuitive visualization of $$f$$. However, I wanted to make use of additional visual techniques made possible with computer graphics. I came up with the following:
+This is sometimes called a **vector plot**. For static mediums like a textbook or chalk board, this is a intuitive visualization of $$f$$.  However, I wanted to make use of additional visual techniques made possible with computer graphics. I came up with the following:
 
-1. Draw a line in $$\mathbf{R}^2$$.
-2. Consider the line as a discrete collection of points (a **polyline**).
-2. Apply a function $$\mathbf{R}^2 \to \mathbf{R}^2$$ to those points.
-3. Draw a new line through the transformed points.
+1.  Draw a line in $$\mathbf{R}^2$$.
+2.  Consider the line as a discrete collection of points (a **polyline**).
+3.  Apply a function $$\mathbf{R}^2 \to \mathbf{R}^2$$ to those points.
+4.  Draw a new line through the transformed points.
 
-<img src="{{site.baseurl}}/assets/images/visualizing-multivariable-derivative/viz-steps.svg" />
+<img src="{{ site.baseurl }}/assets/images/derivative/viz-steps.svg" />
 
 Performing those steps on a grid of lines in $$[-2,2] \times [-2,2]$$ with the function $$f$$ from above produces the following visual:
 
-<img src="{{site.baseurl}}/assets/images/visualizing-multivariable-derivative/grid-and-transform.svg" />
+<img src="{{ site.baseurl }}/assets/images/derivative/grid-and-transform.svg" />
 
 Neat-o! The transformed grid gives some sense of how $$f$$ deforms and stretches the Euclidean plane. As another example, the linear map given by
 
@@ -54,34 +56,32 @@ $$
 
 yields the following picture when applied to a grid around the origin:
 
-<img src="{{site.baseurl}}/assets/images/visualizing-multivariable-derivative/grid-transformed-linear.svg" />
+<img src="{{ site.baseurl }}/assets/images/derivative/grid-transformed-linear.svg" />
 
-As one might expect, the linear map sends linear subspaces to linear subspaces (straight lines to straight lines). The visualization has a rather vivid aesthetic—there are no round curves in the transformed result. This will be helpful for understanding the multivariable derivative, which is always a linear map.
+As one might expect, the linear map sends linear subspaces to linear subspaces (straight lines to straight lines). The visualization has a rather vivid aesthetic—there is no curvature in the transformed result.  This will be helpful for understanding the multivariable derivative, which is always a linear map.
 
-To give the visualization more [object constancy][0], I animate between the starting and ending states of each line as well. As a fun aside, the data of such an animation are computed by what mathematicians call a **straight line homotopy**; as a coder, this is a tween function of SVG `path` elements. If you would like to peek under the hood of the visualization, be sure to check out the main [d3][2]-based drawing method [here][1].
-
-[0]: https://bost.ocks.org/mike/constancy/
-[1]: https://github.com/chnn/multivariable-derivative-viz/blob/a3f0f96610475006b6491c75c473ecda03a784de/app/components/grid-plot/component.js#L68-L110
-[2]: https://d3js.org/
+To give the visualization more [object constancy](https://bost.ocks.org/mike/constancy/), I animate between the starting and ending states of each line as well. As a fun aside, the data of such an animation are computed by what mathematicians call a **straight line homotopy**; as a coder, this is a tween function of SVG `path` elements. If you would like to peek under the hood of the visualization, be sure to check out the main [d3.js](https://d3js.org/)-based drawing method [here](https://github.com/chnn/multivariable-derivative-viz/blob/a3f0f96610475006b6491c75c473ecda03a784de/app/components/grid-plot/component.js#L68-L110).
 
 ## The multivariable derivative
 
-Inspired by the common single variable visualization of the derivative, I wanted to plot functions $$f : \mathbf{R}^2 \to \mathbf{R}^2$$ alongside a derivative-based approximation function. What does this approximation look like for the multivariable case?
+Inspired by the common single variable visualization of the derivative, I wanted to plot functions $$f : \mathbf{R}^2 \to \mathbf{R}^2$$ alongside a derivative-based approximation function. What does this approximation look like in the multivariable case?
 
-The derivative can be generalized to multiple dimensions with the following construction:
-
-Let $$f : \mathbf{R}^n \to \mathbf{R}$$ be a real-valued function of $$n$$ variables. Define a **partial function $$F$$ of $$f$$ with respect the variable $$x_i$$** to be the one-variable function obtained from $$f$$ by holding all variables constant expect $$x_i$$. That is,
+If it exists, the derivative of a multivariable function $$f : \mathbf{R}^n \to \mathbf{R}^m$$ at a point $$\mathbf{a}$$ is a linear function $$T$$ such that $$h : \mathbf{R}^n \to \mathbf{R}^m$$ given by
 
 $$
-F(x_i) = f(a_1,\ a_2,\ \ldots,\ x_i,\ \ldots a_n)
+h(\mathbf{x}) = f(\mathbf{a}) + T(\mathbf{x - a})
 $$
 
-where $$a_j$$ is a constant for $$j \neq i$$. Then the **partial derivative of $$f$$ with respect to $$x_i$$** is the usual derivative of the partial function of $$f$$ with respect to $$x_i$$, denoted $$\partial f / \partial x_i$$.
-
-Now suppose instead that $$f : \mathbf{R}^n \to \mathbf{R}^m$$ is a vector-valued function of $$n$$ variables with component functions $$f_1,\ f_2,\ \ldots,\ f_m$$. Then the **matrix of partial derivatives of $$f$$** (also called **the derivative of $$f$$** or **the Jacobian**) is the matrix
+approximates $$f$$ well near $$\mathbf{a}$$. More precisely, we require that
 
 $$
-Df(x_1,\ x_2, \ldots,\ x_n) := \begin{pmatrix}
+\lim_{\mathbf{x} \to \mathbf{a}} \frac{\lVert f(\mathbf{x}) - h(\mathbf{x}) \rVert}{\lVert \mathbf{x - a} \rVert} = 0
+$$
+
+If such a linear transform $$T$$ exists, it is unique and is given by the **Jacobian matrix of partial derivatives**
+
+$$
+Df(x_1,\ x_2,\ \ldots,\ x_n) := \begin{pmatrix}
 \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2 } & \ldots & \frac{\partial f_1}{\partial x_n} \\[1.1em]
 \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2 } & \ldots & \frac{\partial f_2}{\partial x_n} \\[1.1em]
 \vdots & \vdots & \ddots & \vdots \\[0.4em]
@@ -89,23 +89,11 @@ Df(x_1,\ x_2, \ldots,\ x_n) := \begin{pmatrix}
 \end{pmatrix}
 $$
 
-We say the **$$f$$ is differentiable at $$\mathbf{a} \in \mathbf{R}^n$$** if $$Df(\mathbf{a})$$ exists and the function $$h : \mathbf{R}^n \to \mathbf{R}^m$$ given by
-
-$$
-h(\mathbf{x}) = f(\mathbf{a}) + Df(\mathbf{a})(\mathbf{x - a})^T
-$$
-
-is a good linear approximation to $$f$$ near $$a$$. More precisely, we need that
-
-$$
-\lim_{\mathbf{x} \to \mathbf{a}} \mathbf{\frac{\lVert f(x) - h(x) \rVert}{\lVert x - a \rVert}} = 0
-$$
-
 Suppose we choose $$\mathbf{a} = (1.8,\ 1.4)$$ and compute $$h$$ for the particular $$f$$ given before. Plotting both $$h$$ and $$f$$ together (with $$h$$ in green) yields the following visual:
 
-<img width="500px" src="{{site.baseurl}}/assets/images/visualizing-multivariable-derivative/transformed-grids-overlaid.svg" />
+<img width="500px" src="{{ site.baseurl }}/assets/images/derivative/grid-transformed-overlaid.svg" />
 
-Immediately we can see the essential properties of the derivative: near the chosen point $$\mathbf{a}$$, the function $$h$$ closely approximates $$f$$. Moreover, this approximation is linear; the grid transformed by $$h$$ consists only of straight lines, indicating that it is a linear function. Be sure to check out the [full animated version][3] of this visualization to see different functions at work! 
+Immediately we can see the essential properties of the derivative: near the chosen point $$\mathbf{a}$$, the function $$h$$ closely approximates $$f$$. Moreover, this approximation is linear; the grid transformed by $$h$$ consists only of straight lines, indicating that it is a linear function. Be sure to check out the [full animated version](http://demo.chrishenn.net) of this visualization to see different functions at work!
 
 ## Extending the visualization to complex functions
 
@@ -119,18 +107,14 @@ where $$a,\ z \in \mathbf{C}$$ and $$f'$$ is the derivative of $$f$$.
 
 Typically a point in the complex plane is written as $$a + bi$$ for some $$a,\ b \in \mathbf{R}$$. We could alternatively notate this point as $$(a, b)$$, which looks just like a point in $$\mathbf{R}^2$$! These points operate under a different arithmetic, but can be fed to the same visualization algorithm. In this case, we get a depiction of the points on the real-imaginary plane. Here, for example, is a visualization of the complex exponential function $$f(z) = e^z$$ and its derivative:
 
-<img width="500px" src="{{site.baseurl}}/assets/images/visualizing-multivariable-derivative/complex-exponential.svg" />
+<img width="500px" src="{{ site.baseurl }}/assets/images/derivative/complex-exponential.svg" />
 
 ## Closing thoughts
 
-Next up I'm planning a 3D-printable version of this same visualization. The idea is to perform similar deformation of a lattice in $$\mathbf{R}^3$$.
+Next up I’m planning a 3D-printable version of this same visualization.  The idea is to perform similar deformation of a lattice in $$\mathbf{R}^3$$.
 
-<img width="400px" src="{{ site.baseurl }}/assets/images/visualizing-multivariable-derivative/3d-lattice.jpg" />
+<img width="400px" src="{{ site.baseurl }}/assets/images/derivative/3d-lattice.jpg" />
 
-More on this soon!
+More on this coming soon!
 
-For the curious or computer-minded, the code for this visualization is [on GitHub][4]. Highlights include a [totally bonkers JavaScript implementation of complex arithmitic][5] or the main [plot component][2]. I would also [love to hear](mailto:chris@chrishenn.net) any further ideas for visualization in this area.
-
-
-[4]: https://github.com/chnn/multivariable-derivative-viz
-[5]: https://github.com/chnn/multivariable-derivative-viz/blob/a3f0f96610475006b6491c75c473ecda03a784de/app/utils/complex-numbers.js
+For the curious or computer-minded, the code for this d3.js-based visualization is [on GitHub](https://github.com/chnn/multivariable-derivative-viz).  Highlights include a [totally bonkers JavaScript implementation of complex arithmetic](https://github.com/chnn/multivariable-derivative-viz/blob/a3f0f96610475006b6491c75c473ecda03a784de/app/utils/complex-numbers.js) or the main [plot component](https://github.com/chnn/multivariable-derivative-viz/blob/a3f0f96610475006b6491c75c473ecda03a784de/app/components/grid-plot/component.js).  I would also [love to hear](mailto:chris@chrishenn.net) any further ideas for visualization in this area.
