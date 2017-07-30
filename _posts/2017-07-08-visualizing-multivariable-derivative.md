@@ -4,7 +4,7 @@ layout: post
 ---
 
 <div class="aside">
-  <p>This summer I'm working with <a href="http://blogs.reed.edu/projectproject/">Project Project</a>, a summer research group consisting of Henry Blanchette, Cameron Fish, <a href="http://people.reed.edu/~ormsbyk/">Kyle Ormsby</a>, Lana Tollas, Jalan Ziyad, and myself. Our goal is to visualize mathematical concepts; this post details some work with introductory calculus material.</p>
+  <p>This summer I'm working with <a href="http://people.reed.edu/~ormsbyk/projectproject/">Project Project</a>, a summer research group consisting of Henry Blanchette, Cameron Fish, <a href="http://people.reed.edu/~ormsbyk/">Kyle Ormsby</a>, Lana Tollas, Jalan Ziyad, and myself. Our goal is to visualize mathematical concepts; this post details some work with introductory calculus material.</p>
 </div>
 
 In a first course in calculus, many students encounter a image similar to the following:
@@ -16,7 +16,7 @@ In a first course in calculus, many students encounter a image similar to the fo
 
 Such an illustration highlights a key property of the single variable derivative: it’s the *best linear approximation* of a function at a point. For functions of more than one variable, the derivative exhibits this same characteristic, yet there is no obvious corresponding picture.  What would an analogous visualization look like for a multivariable function?
 
-For the past few weeks, I’ve been working towards a visualization of multivariable functions and their derivatives. Check out the end result [here](http://demo.chrishenn.net), or read on to hear about my process.  I assume some knowledge of calculus and mathematical notation.
+For the past few weeks, I’ve been working towards a visualization of multivariable functions and their derivatives. Check out the end result [here][0], or read on to hear about my process.  I assume some knowledge of calculus and mathematical notation.
 
 ## Visualizing vector fields in the plane
 
@@ -93,7 +93,7 @@ Suppose we choose $$\mathbf{a} = (1.8,\ 1.4)$$ and compute $$h$$ for the particu
 
 <img width="500px" src="{{ site.baseurl }}/assets/images/derivative/grid-transformed-overlaid.svg" />
 
-Immediately we can see the essential properties of the derivative: near the chosen point $$\mathbf{a}$$, the function $$h$$ closely approximates $$f$$. Moreover, this approximation is linear; the grid transformed by $$h$$ consists only of straight lines, indicating that it is a linear function. Be sure to check out the [full animated version](http://demo.chrishenn.net) of this visualization to see different functions at work!
+Immediately we can see the essential properties of the derivative: near the chosen point $$\mathbf{a}$$, the function $$h$$ closely approximates $$f$$. Moreover, this approximation is linear; the grid transformed by $$h$$ consists only of straight lines, indicating that it is a linear function. Be sure to check out the [full animated version][0] of this visualization to see different functions at work!
 
 ## Extending the visualization to complex functions
 
@@ -118,3 +118,5 @@ Next up I’m planning a 3D-printable version of this same visualization.  The i
 More on this coming soon!
 
 For the curious or computer-minded, the code for this d3.js-based visualization is [on GitHub](https://github.com/chnn/multivariable-derivative-viz).  Highlights include a [totally bonkers JavaScript implementation of complex arithmetic](https://github.com/chnn/multivariable-derivative-viz/blob/a3f0f96610475006b6491c75c473ecda03a784de/app/utils/complex-numbers.js) or the main [plot component](https://github.com/chnn/multivariable-derivative-viz/blob/a3f0f96610475006b6491c75c473ecda03a784de/app/components/grid-plot/component.js).  I would also [love to hear](mailto:chris@chrishenn.net) any further ideas for visualization in this area.
+
+[0]: http://people.reed.edu/~ormsbyk/projectproject/assets/posts/multivariable-derivative/multivariable-derivative-viz/
