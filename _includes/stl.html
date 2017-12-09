@@ -1,0 +1,12 @@
+{% capture path %}{{ site.baseurl }}/assets/posts/{{ page.slug }}/{{ include.name }}{% endcapture %}
+{% if include.caption %}
+<figure>
+{% endif %}
+  <div class="stl-container figure-content" data-filename="{{ path }}">
+    <div class='tip'>Interactive 3D Model</div>
+    <span class='loading'>Loading...</span>
+  </div>
+{% if include.caption %}
+  <figcaption>{{ include.caption | markdownify}}</figcaption>
+</figure>
+{% endif %}

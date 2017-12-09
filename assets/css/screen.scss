@@ -10,6 +10,7 @@ $body-font-size: 18px;
 $code-font-size: 14px;
 $body-width: 650px;
 
+$midnight-blue: #2c3e50;
 $wet-asphalt: #34495e;
 $peter-river: #3498db;
 $belize-hole: #2980b9;
@@ -139,6 +140,45 @@ iframe {
         font-size: 14px;
         font-style: italic;
         padding-bottom: 40px;
+    }
+
+    .stl-container {
+        height: 400px;
+        margin: 3rem auto;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid $wet-asphalt;
+        box-sizing: border-box;
+
+        .loading {
+            position: absolute;
+            width: 100%;
+            top: 45%;
+            text-align: center;
+            font-style: italic;
+            color: $wet-asphalt;
+        }
+
+        &.loaded .loading {
+            display: none;
+        }
+
+        .tip {
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            background: $midnight-blue;
+            padding: 10px 6px 6px 10px;
+            font-size: 1rem;
+            border-radius: 3px;
+            font-weight: bold;
+            color: white;
+            font-style: italic;
+        }
+
+        canvas {
+            cursor: pointer;
+        }
     }
 
     .katex, .katex-display {

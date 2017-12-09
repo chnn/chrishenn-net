@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/screen.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/katex.min.css">
 
-        <script src="{{ site.baseurl }}/assets/js/katex.min.js"></script>
     </head>
 
     <body>
@@ -21,6 +20,12 @@
         <div class="content-container">
             {{ content }}
         </div>
+
+        <script src="{{ site.baseurl }}/assets/js/katex.min.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/three.min.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/stl-loader.min.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/orbit-controls.min.js"></script>
+        <script src="{{ site.baseurl }}/assets/js/init-stl.js"></script>
 
         <script>
             document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
