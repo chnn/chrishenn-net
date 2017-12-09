@@ -9,10 +9,7 @@ layout: post
 
 In a first course in calculus, many students encounter a image similar to the following:
 
-<div class="figure">
-    <img width="350px" src="{{ site.baseurl }}/assets/images/derivative/tangent.svg" />
-    <div class="caption">Image courtesy <a href="https://commons.wikimedia.org/wiki/File:Tangent-calculus.svg">Wikipedia</a>.</div>
-</div>
+{% include image.html name="tangent.svg" width="350px" caption="Image courtesy [Wikipedia](https://commons.wikimedia.org/wiki/File:Tangent-calculus.svg)." %}
 
 Such an illustration highlights a key property of the single variable derivative: it’s the *best linear approximation* of a function at a point. For functions of more than one variable, the derivative exhibits this same characteristic, yet there is no obvious corresponding picture.  What would an analogous visualization look like for a multivariable function?
 
@@ -30,7 +27,7 @@ $$
 
 What does $$f$$ look like? A common representation of such functions selects a uniformly-spaced set of points in $$\mathbf{R}^2$$, and draws an arrow at each point representing the magnitude and direction of the vector field:
 
-<img width="300px" src="{{ site.baseurl }}/assets/images/derivative/vector-field.svg" />
+{% include image.html width="300px" name="vector-field.svg" %}
 
 This is sometimes called a **vector plot**. For static mediums like a textbook or chalk board, this is a intuitive visualization of $$f$$.  However, I wanted to make use of additional visual techniques made possible with computer graphics. I came up with the following:
 
@@ -39,11 +36,11 @@ This is sometimes called a **vector plot**. For static mediums like a textbook o
 3.  Apply a function $$\mathbf{R}^2 \to \mathbf{R}^2$$ to those points.
 4.  Draw a new line through the transformed points.
 
-<img src="{{ site.baseurl }}/assets/images/derivative/viz-steps.svg" />
+{% include image.html name="viz-steps.svg" %}
 
 Performing those steps on a grid of lines in $$[-2,2] \times [-2,2]$$ with the function $$f$$ from above produces the following visual:
 
-<img src="{{ site.baseurl }}/assets/images/derivative/grid-and-transform.svg" />
+{% include image.html name="grid-and-transform.svg" %}
 
 Neat-o! The transformed grid gives some sense of how $$f$$ deforms and stretches the Euclidean plane. As another example, the linear map given by
 
@@ -56,7 +53,7 @@ $$
 
 yields the following picture when applied to a grid around the origin:
 
-<img src="{{ site.baseurl }}/assets/images/derivative/grid-transformed-linear.svg" />
+{% include image.html name="grid-transformed-linear.svg" %}
 
 As one might expect, the linear map sends linear subspaces to linear subspaces (straight lines to straight lines). The visualization has a rather vivid aesthetic—there is no curvature in the transformed result.  This will be helpful for understanding the multivariable derivative, which is always a linear map.
 
@@ -91,7 +88,7 @@ $$
 
 Suppose we choose $$\mathbf{a} = (1.8,\ 1.4)$$ and compute $$h$$ for the particular $$f$$ given before. Plotting both $$h$$ and $$f$$ together (with $$h$$ in green) yields the following visual:
 
-<img width="500px" src="{{ site.baseurl }}/assets/images/derivative/grid-transformed-overlaid.svg" />
+{% include image.html name="grid-transformed-overlaid.svg" width="500px" %}
 
 Immediately we can see the essential properties of the derivative: near the chosen point $$\mathbf{a}$$, the function $$h$$ closely approximates $$f$$. Moreover, this approximation is linear; the grid transformed by $$h$$ consists only of straight lines, indicating that it is a linear function. Be sure to check out the [full animated version][0] of this visualization to see different functions at work!
 
@@ -107,13 +104,13 @@ where $$a,\ z \in \mathbf{C}$$ and $$f'$$ is the derivative of $$f$$.
 
 Typically a point in the complex plane is written as $$a + bi$$ for some $$a,\ b \in \mathbf{R}$$. We could alternatively notate this point as $$(a, b)$$, which looks just like a point in $$\mathbf{R}^2$$! These points operate under a different arithmetic, but can be fed to the same visualization algorithm. In this case, we get a depiction of the points on the real-imaginary plane. Here, for example, is a visualization of the complex exponential function $$f(z) = e^z$$ and its derivative:
 
-<img width="500px" src="{{ site.baseurl }}/assets/images/derivative/complex-exponential.svg" />
+{% include image.html name="complex-exponential.svg" width="500px" %}
 
 ## Closing thoughts
 
 Next up I’m planning a 3D-printable version of this same visualization.  The idea is to perform similar deformation of a lattice in $$\mathbf{R}^3$$.
 
-<img width="400px" src="{{ site.baseurl }}/assets/images/derivative/3d-lattice.jpg" />
+{% include image.html name="3d-lattice.jpg" width="400px" %}
 
 More on this coming soon!
 

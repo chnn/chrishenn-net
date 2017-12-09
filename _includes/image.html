@@ -1,0 +1,9 @@
+{% capture path %}{{ site.baseurl }}/assets/posts/{{ page.slug }}/{{ include.name }}{% endcapture %}
+{% if include.caption %}
+<figure>
+{% endif %}
+  <img class="figure-content" style="{% if include.width %} max-width: {{include.width}}; {% endif %} {% if include.height %} max-height: {{include.height}}; {% endif %}" src="{{ path }}" {% if include.alt %} alt="{{ include.alt }}" {% endif %} />
+{% if include.caption %}
+  <figcaption>{{ include.caption | markdownify}}</figcaption>
+</figure>
+{% endif %}
