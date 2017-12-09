@@ -4,7 +4,7 @@ layout: post
 ---
 
 <div class="aside">
-  <p>This summer I'm working with <a href="http://people.reed.edu/~ormsbyk/projectproject/">Project Project</a>, a summer research group consisting of Henry Blanchette, Cameron Fish, <a href="http://people.reed.edu/~ormsbyk/">Kyle Ormsby</a>, Lana Tollas, Jalan Ziyad, and myself. Our goal is to visualize mathematical concepts; this post details some work with introductory calculus material.</p>
+  <p>This summer I'm working with Project Project, a summer research group at Reed College. Our goal is to visualize mathematical concepts; this post details some work with introductory calculus material.</p>
 </div>
 
 In a first course in calculus, many students encounter a image similar to the following:
