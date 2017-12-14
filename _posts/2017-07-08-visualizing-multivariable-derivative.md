@@ -36,7 +36,7 @@ This is sometimes called a **vector plot**. For static mediums like a textbook o
 3.  Apply a function $$\mathbf{R}^2 \to \mathbf{R}^2$$ to those points.
 4.  Draw a new line through the transformed points.
 
-{% include image.html name="viz-steps.svg" %}
+{% include image.html width="300px" name="viz-steps.svg" %}
 
 Performing those steps on a grid of lines in $$[-2,2] \times [-2,2]$$ with the function $$f$$ from above produces the following visual:
 

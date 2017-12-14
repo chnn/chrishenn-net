@@ -1,14 +1,17 @@
 ---
 ---
 
-@import "bootstrap.min.css";
+@import "normalize.css";
+@import "skeleton.css";
+@import "katex.min.css";
 @import "syntax.css";
 
 $sans: "Lato", sans-serif;
 $mono: Monaco, Menlo, Consolas, "Courier New", monospace;
-$body-font-size: 18px;
+$body-font-size: 1.8rem;
 $code-font-size: 14px;
-$body-width: 650px;
+$content-width: 700px;
+$text-content-width: 600px;
 
 $midnight-blue: #2c3e50;
 $wet-asphalt: #34495e;
@@ -22,97 +25,100 @@ $alizarin: #e74c3c;
 
 body {
     font-family: $sans;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: $sans;
-}
-
-p {
-    line-height: 140%;
-    margin-bottom: 18px;
     font-size: $body-font-size;
 }
 
 a {
     color: $peter-river;
-}
+    text-decoration: none;
 
-ul, ol {
-    font-size: $body-font-size;
-    margin-bottom: 18px;
-    padding-left: 0px;
-    margin-left: -7px;
-
-    li {
-        padding-left: 7px;
+    &:hover {
+        border-bottom: 1px solid $peter-river;
     }
 }
 
-pre, code {
-    font-size: $code-font-size;
+// pre, code {
+//     font-size: $code-font-size;
+// }
+
+// pre {
+//     margin-bottom: 18px;
+//     overflow-x: auto;
+// }
+
+// pre code {
+//     white-space: pre;
+// }
+
+code {
+    background-color: #FEFEFE;
+    border-radius: 4px;
 }
 
-pre {
-    margin-bottom: 18px;
-    overflow-x: auto;
-}
-
-pre code {
-    white-space: pre;
-}
-
-iframe {
-    display: block;
-    margin: 20px auto !important;
+pre > code {
+    overflow: scroll;
 }
 
 .brand {
     text-align: center;
     font-family: $mono;
+    font-size: 1.8rem;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-.me {
-    width: 80%;
-    display: block;
-    margin: 10px auto 50px auto;
-}
-
-.content-container {
-    max-width: $body-width + 100px;
-    padding: 0 20px 20px 20px;
+.content {
     margin: 0 auto;
+    max-width: $content-width;
+    padding: 15px;
 }
 
-#home {
-    font-size: $body-font-size;
-
+.home {
     p {
         text-align: center;
     }
 
     h2 {
+        font-size: 2.4rem;
         margin-top: 50px;
         margin-bottom: 30px;
         text-align: center;
     }
+}
 
-    .all-posts {
-        td {
-            padding: 7px 0;
-        }
+.post-link {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 
-        tr td:first-child {
-            padding-right: 20px;
+    .date {
+        flex: 1 0 200px;
+    }
+
+    .title {
+        flex: 1 1 $content-width - 200px;
+    }
+}
+
+@media only screen and (max-width: $content-width) {
+    .post-link {
+        margin-bottom: 20px;
+
+        .date, .title {
+            text-align: center;
         }
     }
 }
 
 .about-page {
-    width: $body-width;
+    max-width: $text-content-width;
     margin: 0 auto;
+
+    img {
+        width: 100%;
+        display: block;
+        margin: 10px auto 50px auto;
+    }
 }
 
 .post {
@@ -123,27 +129,65 @@ iframe {
         margin-top: 0;
         margin-bottom: 25px;
         font-weight: 700;
+        font-size: 3.6rem;
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 2.4rem;
         margin-top: 50px;
         margin-bottom: 25px;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    ul {
+        list-style: circle;
+    }
+
+    .katex, .katex-display {
+        font-size: 2rem;
+    }
+
+    .date {
+        font-weight: 300;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .aside {
+        padding: 15px 0;
+        border-top: 1px solid rgba(189, 195, 199, 0.39);
+        border-bottom: 1px solid rgba(189, 195, 199, 0.39);
+        margin-bottom: 40px;
+
+        p {
+            font-style: italic;
+            font-size: 80%;
+        } 
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    figure {
+        margin: 20px 0;
     }
 
     .figure-content {
         display: block;
         margin: 0 auto;
-        padding: 20px 0;
+        width: 100%;
     }
 
     figcaption {
         text-align: center;
         width: 80%;
-        margin: 0 auto;
+        margin: 2.5rem auto 2.5rem auto;
         font-size: 14px;
         font-style: italic;
-        padding-bottom: 40px;
     }
 
     .stl-container {
@@ -185,47 +229,9 @@ iframe {
         }
     }
 
-    .katex, .katex-display {
-        font-size: $body-font-size + 2px;
-    }
-
-    .date {
-        font-weight: 300;
-        margin: 10px auto;
-        text-align: center;
-        font-style: italic;
-    }
-
-    .aside {
-        padding: 15px 0;
-        border-top: 1px solid rgba(189, 195, 199, 0.39);
-        border-bottom: 1px solid rgba(189, 195, 199, 0.39);
-        margin-bottom: 40px;
-
-        p {
-            font-style: italic;
-            font-size: 16px;
-        } 
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    .content {
-        width: $body-width;
-        margin: 35px auto;
-
-        a {
-            padding: 2px 4px;
-            margin: 0 -2px;
-            border-radius: 4px;
-
-            &:hover {
-                text-decoration: none;
-                background: $peter-river;
-                color: white;
-            }
-        }
+    .post-content {
+        max-width: $text-content-width;
+        margin: 40px auto;
     }
 }
+

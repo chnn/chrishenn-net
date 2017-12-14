@@ -7,7 +7,9 @@ I'm supposed to be writing a big ol' thesis at the moment, which involves the mi
 
 I hacked together [a tool](https://github.com/chnn/mathbib) that works like this:
 
-<script type="text/javascript" src="https://asciinema.org/a/3jk2SzOVZgSrinv9M7oUsodNw.js" id="asciicast-3jk2SzOVZgSrinv9M7oUsodNw" async></script>
+<figure>
+    <script type="text/javascript" src="https://asciinema.org/a/3jk2SzOVZgSrinv9M7oUsodNw.js" id="asciicast-3jk2SzOVZgSrinv9M7oUsodNw" async></script>
+</figure>
 
 I'm mostly excited about this since it is my first project written in Rust. The experience was more productive than I anticipated, largely due to the healthy Cargo-based ecosystem in Rust-land. After reading the first few chapters of [the book](https://doc.rust-lang.org/book/), it was easy to wire up some plumbing between [various crates](https://github.com/chnn/mathbib/blob/6abbc95848b5a80b932eb4e6a74f3f6fa8eaa43a/Cargo.toml#L7-L13) to get a working prototype very rapidly. 
 

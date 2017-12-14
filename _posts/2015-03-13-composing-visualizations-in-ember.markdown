@@ -9,9 +9,13 @@ For work I build a lot of data visualizations in Ember. Doing data visualization
 
 Here's the video:
 
-<iframe width="600" height="318" src="https://www.youtube-nocookie.com/embed/J-LpgGqyxcI?rel=0" frameborder="0" allowfullscreen></iframe>
+<figure>
+    <iframe width="600" height="318" src="https://www.youtube-nocookie.com/embed/J-LpgGqyxcI?rel=0" frameborder="0" allowfullscreen></iframe>
+</figure>
 
-<script async class="speakerdeck-embed" data-id="8f3bada23d084c219eb4c44353ccee7f" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+<figure>
+    <script async class="speakerdeck-embed" data-id="8f3bada23d084c219eb4c44353ccee7f" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+</figure>
 
 Part of the presentation included a demo, for which the code is [on GitHub][0]. I also heavily rely on a paper by Hadley Wickham called “A layered grammar of graphics” It’s [available here][1] and is fantastic.
 

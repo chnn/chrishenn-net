@@ -3,17 +3,17 @@ layout: default
 title: Home
 ---
 
-<div id="home">
+<div class="home">
     <p>Hello, I'm Chris Henn. You can contact me at chris@chrishenn.net. <small><a href="{{ site.baseurl }}/about.html">More &raquo;</a></small></p>
     <h2>All Posts</h2>
-    <table class="all-posts">
-        <tbody>
-            {% for post in site.posts %}
-            <tr>
-                <td>{{ post.date | date_to_long_string }}</td>
-                <td><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% for post in site.posts %}
+    <div class="post-link">
+        <div class="date">
+            {{ post.date | date_to_long_string }}
+        </div>
+        <div class="title">
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </div>
+    </div>
+    {% endfor %}
 </div>
