@@ -11,11 +11,12 @@
     </head>
 
     <body>
-        <header>
-            <div class="brand"><a href="http://chrishenn.net">chrishenn.net</a></div>
-        </header>
-
         <div class="content">
+            <header>
+                <div><a href="http://chrishenn.net">chrishenn.net</a></div>
+                <div><a href="{{ site.baseurl }}/about.html">About</a></div>
+            </header>
+
             {{ content }}
         </div>
 
@@ -30,11 +31,5 @@
                 el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true });
             });
         </script>
-
-        <!-- For interactive STL file viewing -->
-        <script src="{{ site.baseurl }}/assets/js/three.min.js"></script>
-        <script src="{{ site.baseurl }}/assets/js/stl-loader.min.js"></script>
-        <script src="{{ site.baseurl }}/assets/js/orbit-controls.min.js"></script>
-        <script src="{{ site.baseurl }}/assets/js/init-stl.js"></script>
     </body>
 </html>

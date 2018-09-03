@@ -10,7 +10,7 @@ For work I build a lot of data visualizations in Ember. Doing data visualization
 Here's the video:
 
 <figure>
-    <iframe width="600" height="318" src="https://www.youtube-nocookie.com/embed/J-LpgGqyxcI?rel=0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="650" height="370" src="https://www.youtube-nocookie.com/embed/J-LpgGqyxcI?rel=0" frameborder="0" allowfullscreen></iframe>
 </figure>
 
 <figure>

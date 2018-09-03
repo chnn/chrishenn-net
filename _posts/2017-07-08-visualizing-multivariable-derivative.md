@@ -117,3 +117,10 @@ More on this coming soon!
 For the curious or computer-minded, the code for this d3.js-based visualization is [on GitHub](https://github.com/chnn/multivariable-derivative-viz).  Highlights include a [totally bonkers JavaScript implementation of complex arithmetic](https://github.com/chnn/multivariable-derivative-viz/blob/a3f0f96610475006b6491c75c473ecda03a784de/app/utils/complex-numbers.js) or the main [plot component](https://github.com/chnn/multivariable-derivative-viz/blob/a3f0f96610475006b6491c75c473ecda03a784de/app/components/grid-plot/component.js).  I would also [love to hear](mailto:chris@chrishenn.net) any further ideas for visualization in this area.
 
 [0]: http://people.reed.edu/~ormsbyk/projectproject/assets/posts/multivariable-derivative/multivariable-derivative-viz/
+
+
+<!-- For interactive STL file viewing -->
+<script src="{{ site.baseurl }}/assets/js/three.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/stl-loader.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/orbit-controls.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/init-stl.js"></script>

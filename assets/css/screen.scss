@@ -5,15 +5,14 @@
 @import "skeleton.css";
 @import "katex.min.css";
 @import "syntax.css";
-@import "icomoon.css";
 
 $sans: "Source Sans Pro", sans-serif;
 $mono: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
 $body-font-size: 1.8rem;
 $math-font-size: $body-font-size;
 $code-font-size: 14px;
-$content-width: 700px;
-$text-content-width: 650px;
+$site-width: 650px;
+$date-width: 170px;
 
 $gray02: #bdc3c7;
 $gray08: #303845;
@@ -47,28 +46,21 @@ pre > code {
     overflow: scroll;
 }
 
-.brand {
-    text-align: center;
-    font-family: $sans;
-    font-size: $body-font-size;
-    padding-top: 25px;
-    padding-bottom: 25px;
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 60px auto;
 }
 
 .content {
     margin: 0 auto;
-    max-width: $content-width;
+    max-width: $site-width;
     padding: 15px;
 }
 
 .home {
-    .intro {
-        text-align: center;
-    }
-
     h2 {
         font-size: 2.4rem;
-        margin-top: 50px;
         margin-bottom: 30px;
         text-align: center;
     }
@@ -80,19 +72,13 @@ pre > code {
     margin-bottom: 10px;
 
     .date {
-        flex: 1 0 200px;
+        flex: 1 0 $date-width;
     }
 
     .title {
-        flex: 1 1 $content-width - 200px;
+        flex: 1 1 $site-width - $date-width;
         display: flex;
         align-items: center;
-    }
-
-    .icon-link {
-        color: $gray02;
-        font-size: 1.6rem;
-        margin-left: 12px;
     }
 
     p {
@@ -101,7 +87,7 @@ pre > code {
     }
 }
 
-@media only screen and (max-width: $content-width) {
+@media only screen and (max-width: $site-width) {
     .post-link {
         margin-bottom: 20px;
 
@@ -112,19 +98,17 @@ pre > code {
 }
 
 .page {
-    max-width: $text-content-width;
     margin: 0 auto;
 
     img {
-        width: 100%;
+        max-width: 300px;
         display: block;
-        margin: 10px auto 50px auto;
+        margin: 40px auto;
     }
 }
 
 .post {
     margin: 0 auto 80px auto;
-    max-width: $text-content-width;
 
     h1 {
         margin-top: 0;
@@ -226,9 +210,6 @@ pre > code {
         canvas {
             cursor: pointer;
         }
-    }
-
-    .post-content {
     }
 }
 
