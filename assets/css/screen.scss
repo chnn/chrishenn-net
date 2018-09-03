@@ -7,63 +7,50 @@
 @import "syntax.css";
 @import "icomoon.css";
 
-$sans: "Lato", sans-serif;
-$mono: Monaco, Menlo, Consolas, "Courier New", monospace;
+$sans: "Source Sans Pro", sans-serif;
+$mono: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
 $body-font-size: 1.8rem;
+$math-font-size: $body-font-size;
 $code-font-size: 14px;
 $content-width: 700px;
-$text-content-width: 600px;
+$text-content-width: 650px;
 
-$midnight-blue: #2c3e50;
-$wet-asphalt: #34495e;
-$peter-river: #3498db;
-$belize-hole: #2980b9;
-$silver: #bdc3c7;
-$clouds: #ecf0f1;
-$carrot: #e67e22;
-$pumpkin: #d35400;
-$alizarin: #e74c3c;
+$gray02: #bdc3c7;
+$gray08: #303845;
+
+$link: #2247fa;
+$link-hover: #24129d;
 
 body {
     font-family: $sans;
     font-size: $body-font-size;
+    line-height: 1.4;
 }
 
 a {
-    color: $peter-river;
-    text-decoration: none;
+    color: $link;
 
     &:hover {
-        border-bottom: 1px solid $peter-river;
+        color: $link-hover;
     }
 }
 
-// pre, code {
-//     font-size: $code-font-size;
-// }
-
-// pre {
-//     margin-bottom: 18px;
-//     overflow-x: auto;
-// }
-
-// pre code {
-//     white-space: pre;
-// }
-
 code {
+    font-family: $mono;
+    letter-spacing: -0.5px;
     background-color: #FEFEFE;
     border-radius: 4px;
 }
 
 pre > code {
+    font-family: $mono;
     overflow: scroll;
 }
 
 .brand {
     text-align: center;
-    font-family: $mono;
-    font-size: 1.8rem;
+    font-family: $sans;
+    font-size: $body-font-size;
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -103,13 +90,9 @@ pre > code {
     }
 
     .icon-link {
-        color: $silver;
+        color: $gray02;
         font-size: 1.6rem;
         margin-left: 12px;
-    }
-
-    a:hover {
-        margin-bottom: -1px;
     }
 
     p {
@@ -140,13 +123,13 @@ pre > code {
 }
 
 .post {
-    margin-bottom: 80px;
+    margin: 0 auto 80px auto;
+    max-width: $text-content-width;
 
     h1 {
-        text-align: center;
         margin-top: 0;
-        margin-bottom: 25px;
-        font-weight: 700;
+        margin-bottom: 35px;
+        font-weight: 400;
         font-size: 3.6rem;
     }
 
@@ -165,20 +148,18 @@ pre > code {
     }
 
     .katex, .katex-display {
-        font-size: 2rem;
+        font-size: $math-font-size;
     }
 
     .date {
-        font-weight: 300;
-        margin: 10px auto;
-        text-align: center;
+        margin-bottom: 10px;
     }
 
     .aside {
         padding: 15px 0;
         border-top: 1px solid rgba(189, 195, 199, 0.39);
         border-bottom: 1px solid rgba(189, 195, 199, 0.39);
-        margin-bottom: 40px;
+        margin-bottom: 35px;
 
         p {
             font-style: italic;
@@ -213,7 +194,7 @@ pre > code {
         margin: 3rem auto;
         position: relative;
         overflow: hidden;
-        border: 1px solid $wet-asphalt;
+        border: 1px solid $gray08;
         box-sizing: border-box;
 
         .loading {
@@ -222,7 +203,7 @@ pre > code {
             top: 45%;
             text-align: center;
             font-style: italic;
-            color: $wet-asphalt;
+            color: $gray08;
         }
 
         &.loaded .loading {
@@ -233,7 +214,7 @@ pre > code {
             position: absolute;
             top: -4px;
             left: -4px;
-            background: $midnight-blue;
+            background: $gray08;
             padding: 10px 6px 6px 10px;
             font-size: 1rem;
             border-radius: 3px;
@@ -248,8 +229,6 @@ pre > code {
     }
 
     .post-content {
-        max-width: $text-content-width;
-        margin: 40px auto;
     }
 }
 
