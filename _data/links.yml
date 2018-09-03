@@ -1,4 +1,12 @@
+- title: The action of the modular group on the upper half plane
+  date: 2018-04-20 00:00:00
+  url: https://beta.observablehq.com/@chnn/the-action-of-the-modular-group-on-the-upper-half-plane
+  type: "link"
 - title: A homeomorphism from 2D lattices to finite subsets of $$S^1$$
   date: 2018-05-02 00:00:00
   url: https://beta.observablehq.com/@chnn/2d-lattices-and-finite-subsets-of-a-circle
+  type: "link"
+- title: A fast JavaScript implementation of the Ramer-Douglas-Peucker algorithm
+  date: 2018-08-11 00:00:00
+  url: https://beta.observablehq.com/@chnn/running-ramer-douglas-peucker-on-typed-arrays
   type: "link"
