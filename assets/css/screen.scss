@@ -5,6 +5,7 @@
 @import "skeleton.css";
 @import "katex.min.css";
 @import "syntax.css";
+@import "icomoon.css";
 
 $sans: "Lato", sans-serif;
 $mono: Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -101,10 +102,10 @@ pre > code {
         align-items: center;
     }
 
-    .fa-external-link-alt {
+    .icon-link {
         color: $silver;
-        font-size: 1.4rem;
-        margin-left: 15px;
+        font-size: 1.6rem;
+        margin-left: 12px;
     }
 
     a:hover {
