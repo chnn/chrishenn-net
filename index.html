@@ -2,9 +2,7 @@
 layout: default
 title: Home
 ---
-
 <div class="home">
-    <h2>All Posts</h2>
     {% assign links = "" | split: "" %}
     {% for link in site.data.links %}
       {% assign links = links | push: link %}
@@ -14,15 +12,9 @@ title: Home
     {% endfor %}
     {% assign links = links | sort: "date" | reverse %}
     {% for link in links %}
-    <div class="post-link">
-        <div class="date">
-            {{ link.date | date_to_long_string }}
-        </div>
-        <div class="title">
-            <a href="{{ link.url | relative_url }}">
-                {{ link.title | markdownify}}
-            </a>
-        </div>
-    </div>
+    <a class="post-header" href="{{ link.url | relative_url }}">
+        <div class="date">{{ link.date | date_to_long_string }}</div>
+        <h1 class="title">{{ link.title }}</h1>
+    </a>
     {% endfor %}
 </div>

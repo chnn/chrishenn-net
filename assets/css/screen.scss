@@ -2,214 +2,154 @@
 ---
 
 @import "normalize.css";
-@import "skeleton.css";
-@import "katex.min.css";
 @import "syntax.css";
 
-$sans: "Source Sans Pro", sans-serif;
-$mono: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-$body-font-size: 1.8rem;
-$math-font-size: $body-font-size;
-$code-font-size: 14px;
-$site-width: 650px;
-$date-width: 170px;
+$font-serif: Georgia, serif;
+$font-mono: Inconsolata, Monaco, Menlo, Consolas, "Courier New", monospace;
 
-$gray02: #bdc3c7;
-$gray08: #303845;
+$font-01: 14px;
+$font-02: 18px;
+$font-03: 20px;
+$font-04: 28px;
 
-$link: #2247fa;
-$link-hover: #24129d;
+$gray-01: #f1f1f1;
+$gray-03: #bdc3c7;
+$gray-04: #303845;
+$gray-05: #232323;
+
+$blue-04: rgb(0, 0, 255);
+
+$max-prose-width: 650px;
+$max-content-width: 900px;
 
 body {
-    font-family: $sans;
-    font-size: $body-font-size;
-    line-height: 1.4;
+  font-family: $font-serif;
+  font-size: $font-02;
+  line-height: 1.5;
+  margin: 40px 40px 100px 40px;
+  max-width: $max-content-width;
+  color: $gray-05;
+}
+
+h1 {
+  font-size: $font-04;
+  font-weight: normal;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: $font-03;
+  margin: 40px 0 30px 0;
 }
 
 a {
-    color: $link;
+  text-decoration: none;
+  color: $gray-05;
 
-    &:hover {
-        color: $link-hover;
-    }
+  &:hover {
+    color: $blue-04;
+  }
+}
+
+p a {
+  text-decoration: underline;
+}
+
+pre {
+  background-color: $gray-01 !important;
+  padding: 10px;
 }
 
 code {
-    font-family: $mono;
-    letter-spacing: -0.5px;
-    background-color: #FEFEFE;
-    border-radius: 4px;
+  font-family: $font-mono;
+  font-size: $font-02;
 }
 
 pre > code {
-    font-family: $mono;
-    overflow: scroll;
+  font-family: $font-mono;
+  overflow: scroll;
+  font-size: $font-02;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto 60px auto;
+  margin-bottom: 70px;
+
+  .about {
+    padding-left: 5px;
+    font-size: $font-01;
+  }
 }
 
-.content {
-    margin: 0 auto;
-    max-width: $site-width;
-    padding: 15px;
+ol li,
+ul li {
+  margin-bottom: 20px;
 }
 
-.home {
-    h2 {
-        font-size: 2.4rem;
-        margin-bottom: 30px;
-        text-align: center;
-    }
+p,
+ul,
+ol,
+pre,
+.aside,
+.katex-display {
+  max-width: $max-prose-width;
 }
 
-.post-link {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-
-    .date {
-        flex: 1 0 $date-width;
-    }
-
-    .title {
-        flex: 1 1 $site-width - $date-width;
-        display: flex;
-        align-items: center;
-    }
-
-    p {
-        margin: 0;
-        padding: 0;
-    }
+.post-header {
+  display: block;
+  margin-bottom: 70px;
 }
 
-@media only screen and (max-width: $site-width) {
-    .post-link {
-        margin-bottom: 20px;
-
-        .date, .title {
-            text-align: center;
-        }
-    }
+.post-header h1 {
+  margin: 0;
+  padding: 0;
 }
 
-.page {
-    margin: 0 auto;
-
-    img {
-        max-width: 300px;
-        display: block;
-        margin: 40px auto;
-    }
+.post-header .date {
+  margin-bottom: 10px;
+  font-size: $font-02;
 }
 
-.post {
-    margin: 0 auto 80px auto;
+.aside {
+  padding: 15px 0;
+  border-top: 1px solid rgba(189, 195, 199, 0.39);
+  border-bottom: 1px solid rgba(189, 195, 199, 0.39);
+  margin-bottom: 35px;
 
-    h1 {
-        margin-top: 0;
-        margin-bottom: 35px;
-        font-weight: 400;
-        font-size: 3.6rem;
-    }
+  p {
+    font-style: italic;
+    font-size: 80%;
+  }
 
-    h2 {
-        font-size: 2.4rem;
-        margin-top: 50px;
-        margin-bottom: 25px;
-    }
-
-    ol {
-        list-style: decimal;
-    }
-
-    ul {
-        list-style: circle;
-    }
-
-    .katex, .katex-display {
-        font-size: $math-font-size;
-    }
-
-    .date {
-        margin-bottom: 10px;
-    }
-
-    .aside {
-        padding: 15px 0;
-        border-top: 1px solid rgba(189, 195, 199, 0.39);
-        border-bottom: 1px solid rgba(189, 195, 199, 0.39);
-        margin-bottom: 35px;
-
-        p {
-            font-style: italic;
-            font-size: 80%;
-        } 
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    figure {
-        margin: 20px 0;
-    }
-
-    .figure-content {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    figcaption {
-        text-align: center;
-        width: 80%;
-        margin: 2.5rem auto 2.5rem auto;
-        font-size: 14px;
-        font-style: italic;
-    }
-
-    .stl-container {
-        height: 400px;
-        margin: 3rem auto;
-        position: relative;
-        overflow: hidden;
-        border: 1px solid $gray08;
-        box-sizing: border-box;
-
-        .loading {
-            position: absolute;
-            width: 100%;
-            top: 45%;
-            text-align: center;
-            font-style: italic;
-            color: $gray08;
-        }
-
-        &.loaded .loading {
-            display: none;
-        }
-
-        .tip {
-            position: absolute;
-            top: -4px;
-            left: -4px;
-            background: $gray08;
-            padding: 10px 6px 6px 10px;
-            font-size: 1rem;
-            border-radius: 3px;
-            font-weight: bold;
-            color: white;
-            font-style: italic;
-        }
-
-        canvas {
-            cursor: pointer;
-        }
-    }
+  p:last-child {
+    margin: 0;
+  }
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+figure {
+  margin: 40px 0;
+  max-width: $max-prose-width;
+}
+
+.figure-content {
+  display: block;
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  width: 80%;
+  margin: 2.5rem auto 2.5rem auto;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.katex,
+.katex-display {
+  font-size: inherit;
+}

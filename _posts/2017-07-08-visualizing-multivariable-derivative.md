@@ -124,3 +124,5 @@ For the curious or computer-minded, the code for this d3.js-based visualization 
 <script src="{{ site.baseurl }}/assets/js/stl-loader.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/orbit-controls.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/init-stl.js"></script>
+
+{% include katex.html %}
