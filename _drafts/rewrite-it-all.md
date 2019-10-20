@@ -12,3 +12,6 @@ My preferences are driven by my belief in a few complementary axioms:
 2. Modifying code is hard
 3. Incidental complexity is rampant
 4. Necessary complexity is rare
+
+I don't think these beliefs would make sense in a high quality codebase.
+But I'm not convinced such a codebase exists :)

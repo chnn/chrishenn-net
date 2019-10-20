@@ -1,58 +1,85 @@
 ---
-title: "React Pattern: Edit Buffer Components"
+title: "React pattern: resetting to initial state"
 layout: post
 ---
 
-I've found myself repeating a pattern in React lately.
-I call it an _edit buffer_; it's any component that
+Here's a hooks pattern I've found myself repeating often.
 
-1. Copies passed data to local state
-2. Provides a UI to edit that state
-2. Emits changes only once a valid edit is made
+The setup:
 
-Here's a concrete example: 
+1. I have a model that appears in more than one location in the UI
+2. The model can be edited from different locations simultaneously
+3. Edits to the model are buffered into state and propogated only when valid
 
-```
-PlotContainer
-  Plot
-    RegionSelector
-  PlotSettings
-    SomeMiscSettings
-    RegionInputs
-```
+```tsx
+const ThresholdEditor = ({threshold, onSaveThreshold}) => {
+  const [draftThreshold, dispatch] = useReducer(reducer, threshold)
 
-### Avoiding a common pitfall with "one way" state hooks
-
-```
-function useOneWayState(initialState) {
-  const ref = useRef(initialState)
-  const [state, setState] = useState(initialState)
-
-  if (ref.current === initialState) {
-    return [state, setState]
-  }
-
-  ref.current = initialState
-
-  return [initialState, setState]
+  return (
+    <div className="threshold-editor">
+      {/* ... */}
+    </div>
+  )
 }
 ```
 
+```tsx
+const ThresholdEditor = ({threshold, onSaveThreshold}) => {
+  const initialThresholdRef = useRef(threshold)
+
+  const [draftThreshold, dispatch] = useReducer((state, action) => {
+    // If the `threshold` has changed since we started editing it, reset the
+    // state to the `threshold`
+    if (initialThresholdRef.current !== threshold) {
+      initialThresholdRef.current = threshold
+
+      return threshold
+    }
+
+    // Otherwise proceed as normal
+    return reducer(state, action)
+  }, threshold)
+
+  return (
+    <div className="threshold-editor">
+      {/* ... */}
+    </div>
+  )
+}
 ```
-function useOneWayReducer<R extends Reducer<any, any>>(
-  reducer: R,
-  defaultState: ReducerState<R>
-): [ReducerState<R>, Dispatch<ReducerAction<R>>] {
-  // ...
+
+```tsx
+const useResettingReducer = (reducer, initialState) => {
+  const initialStateRef = useRef(initialState)
+
+  return useReducer((state, action) => {
+    if (initialStateRef.current !== initialState) {
+      initialStateRef.current = initialState
+
+      return initialState
+    }
+
+    return reducer(state, action)
+  }, initialState)
+}
+```
+
+```tsx
+const ThresholdEditor = ({threshold, onSaveThreshold}) => {
+  const [draftThreshold, dispatch] = useResettingReducer(reducer, threshold)
+
+  return (
+    <div className="threshold-editor">
+      {/* ... */}
+    </div>
+  )
 }
 ```
 
 
-- sequence diagrams to explain problematic data flow
 
-<div class="note">
-  By the way, when I say "pattern" I'm thinking of the original interpretation put forth in [this talk][pattern talk].
-</div>
 
-[pattern talk]: https://www.deconstructconf.com/2017/brian-marick-patterns-failed-why-should-we-care
+
+
+
 [ember one way]: https://api.emberjs.com/ember/2.15/namespaces/Ember.computed/methods/oneWay?anchor=oneWay
