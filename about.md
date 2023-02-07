@@ -1,18 +1,14 @@
 ---
 layout: page
-title: About
+title: about
 slug: about
 ---
 
-{% include image.html name="me.jpg" width="300px" %}
+{% include image.html name="me.jpg" alt="a picture of me at the top of timberline meadows at mt hood after skinning up on my skis. i'm smiling and holding one ski. mt jefferson can be seen in the background" width="300px" %}
 
-Hello, I'm Christopher Henn. I work as a programmer at [Stripe] (previously [InfluxData][influx], [Tilde][tilde], [H2Ometrics][h2ometrics]). I also recently graduated from Reed College with a degree in mathematics.
+Hello, I'm Christopher Henn. I work as a frontend programmer. I also recently graduated from Reed College with a degree in mathematics.
 
 When I'm not attempting to befriend a computer, I can usually be found trail running. Find me elsewhere in cyberspace on [GitHub][github] or [Strava][strava].
 
-[stripe]: https://stripe.com
-[influx]: https://github.com/influxdata
-[tilde]: http://www.tilde.io
-[h2ometrics]: https://www.h2ometrics.com
 [strava]: https://www.strava.com/athletes/163049
 [github]: https://github.com/chnn
