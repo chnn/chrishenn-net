@@ -18,11 +18,11 @@ slug: cats
 
 - the litter box will scoop itself, but needs to be emptied every 3-4 days. the light at the top of the litter box will be flashing blue if it needs to be emptied.
 
-- to empty the box, open the drawer by pulling at the step at the base. remove the trash bag, tie it up, and throw it in the kitchen trash can. add a new trash bag (from below the kitchen sink) and push it flat against the drawer, then close the drawer. press the middle button on the control panel (looks like a circle with a x in the middle)
+- to empty the box, open the drawer by pulling at the step at the base. remove the trash bag, tie it up, and throw it in the kitchen trash can. add a new **clear** trash bag (from below the kitchen sink) and push it flat against the drawer, then close the drawer. press the middle button on the control panel (looks like a circle with a x in the middle)
 
 - otherwise, the light on the litter box shows the status of the box
   - solid blue → nothing needs to be done
-  - solid red → the litter box is waiting to cycle. you can just ignore it.
+  - solid red → the litter box is waiting to cycle. you can just ignore it
   - any other color → idk what's up but the [manual](https://www.litter-robot.com/manual_pdf/Litter-Robot-4-Manual.pdf) will say (page 20)
 
 ### toys
@@ -31,6 +31,13 @@ slug: cats
 - bean loves foam soccer balls and the squishy mouse toy. these toys might be stuck under the fridge
 - snorkel loves the rattle mouses
 - if snorkel shows you her cute tummy, don't fall for it. it's a trap
+
+### if they do something gross
+
+if the cats vom or poo where they shouldn't:
+
+- yuck! sorry you have to deal with it. this rarely happens but isn't entirely unexpected
+- there are nitrile disposable gloves, paper towels, and some enzymatic cleaners ("nature's miracle") under the kitchen sink
 
 ### in case of emergency
 
