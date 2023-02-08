@@ -18,7 +18,7 @@ slug: cats
 
 - the litter box will scoop itself, but needs to be emptied every 3-4 days. the light at the top of the litter box will be flashing blue if it needs to be emptied.
 
-- to empty the box, open the drawer by pulling at the step at the base. remove the trash bag, tie it up, and throw it in the kitchen trash can. add a new **clear** trash bag (from below the kitchen sink) and push it flat against the drawer, then close the drawer. press the middle button on the control panel (looks like a circle with a x in the middle)
+- to empty the box, open the drawer by pulling at the step at the base. remove the trash bag, tie it up, and throw it in the kitchen trash can. add a new clear trash bag (from below the kitchen sink) and push it flat against the drawer, then close the drawer. press the middle button on the control panel (looks like a circle with a x in the middle)
 
 - otherwise, the light on the litter box shows the status of the box
   - solid blue → nothing needs to be done
