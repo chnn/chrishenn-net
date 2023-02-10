@@ -9,8 +9,8 @@ slug: cats
 ### food & water
 
 - food is on the top shelf in the closet in the living room
-- in the morning, give each cat 1/4 cup of dry food (25 g)
-- in the evening, give each cat 1/4 cup of dry food and split a 3 oz can of wet food between them
+- in the morning, give each cat a heaping 1/4 cup of dry food (35 g)
+- in the evening, give each cat a 3 oz can of wet food
 - clean the bowls every other day or so
 - if the water fountain is running low, pour some more water in it
 
