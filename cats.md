@@ -8,33 +8,31 @@ slug: cats
 
 ### food & water
 
-- food is on the top shelf in the closet in the living room
-- in the morning, give each cat a heaping 1/4 cup of dry food (35 g)
-- in the evening, give each cat a 3 oz can of wet food
+- food is in the cabinet above the fridge
+- in the morning, give each cat 30 g of dry food (about 1/4 cup)
+- in the evening, give each cat:
+  - a 3 oz can of wet food 
+  - with 1/4 tsp of psyllium husk mixed in
+  - and in snorkel's bowl, also mix in one packet of FortiFlora probiotics
 - clean the bowls every other day or so
 - if the water fountain is running low, pour some more water in it
 
 ### litter
 
-- the litter box will scoop itself, but needs to be emptied every 3-4 days. the light at the top of the litter box will be flashing blue if it needs to be emptied.
-
-- to empty the box, open the drawer by pulling at the step at the base. remove the trash bag, tie it up, and throw it in the kitchen trash can. add a new clear trash bag (from below the kitchen sink) and push it flat against the drawer, then close the drawer. press the middle button on the control panel (looks like a circle with a x in the middle)
-
-- otherwise, the light on the litter box shows the status of the box
-  - solid blue → nothing needs to be done
-  - solid red → the litter box is waiting to cycle. you can just ignore it
-  - any other color → idk what's up but the [manual](https://www.litter-robot.com/manual_pdf/Litter-Robot-4-Manual.pdf) will say (page 20)
+- scoop the litter box once in the morning and once at night
+- dispose of waste into the top of the black pail next to the litter box
+- when done scooping, pull the handle in the middle of the pail to drop the waste below and seal the odors ([video](https://youtu.be/3bX2z3qsyjQ?t=36))
 
 ### toys
 
 - the cats love to play!
-- bean loves foam soccer balls and the squishy mouse toy. these toys might be stuck under the fridge
+- bean loves foam soccer balls and the squishy mouse toy. these toys might be stuck under the couch
 - snorkel loves the rattle mouses
 - if snorkel shows you her cute tummy, don't fall for it. it's a trap
 
 ### if they do something gross
 
-if the cats vom or poo where they shouldn't:
+i.e. if the cats vom or poo where they shouldn't:
 
 - yuck! sorry you have to deal with it. this rarely happens but isn't entirely unexpected
 - there are nitrile disposable gloves, paper towels, and some enzymatic cleaners ("nature's miracle") under the kitchen sink
@@ -42,5 +40,5 @@ if the cats vom or poo where they shouldn't:
 ### in case of emergency
 
 - two cat carriers will be out in the living room
-- the cats' vet is [greenpoint veterinary care](https://goo.gl/maps/9QbmTKHxHafeJHdNA) (about an 8 minute walk away on mcguinness blvd)
-- if their vet is closed, the nearby [veterinary emergency group](https://goo.gl/maps/eQiZ7Dq9AaTDyg6Z7) is open 24/7 (a 11 minute walk on kent)
+- the cats' vet is [greenpoint veterinary care](https://goo.gl/maps/9QbmTKHxHafeJHdNA) (3 blocks away)
+- if their vet is closed, the nearby [veterinary emergency group](https://goo.gl/maps/eQiZ7Dq9AaTDyg6Z7) is open 24/7 (0.9 mi away on kent)
