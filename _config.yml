@@ -1,5 +1,0 @@
-permalink: /posts/:title
-highlighter: rouge
-sass:
-    sass_dir: assets/styles
-    style: compressed
