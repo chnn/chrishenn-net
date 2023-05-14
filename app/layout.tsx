@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="prose mx-auto my-8">
+      <body className="prose mx-auto p-4 lg:p-8">
         <nav className="mb-16 flex justify-between">
           <Link href="/posts">chrishenn.net</Link>
           <Link href="/about">About</Link>
