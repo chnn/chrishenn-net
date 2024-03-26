@@ -13,8 +13,8 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <header className="mb-8">
-        <h1 className="mb-4">{post.title}</h1>
+      <header className="mb-4">
+        <h1 className="mb-2">{post.title}</h1>
         <div className="text-lg">{post.date}</div>
       </header>
       {renderMarkdoc(post.content)}
