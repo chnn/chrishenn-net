@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { getPosts } from "@/app/posts/utils";
 import { Metadata } from "next";
+import { Nav } from "@/app/posts/Nav";
 
 const EXTERNAL_POSTS = [
   {

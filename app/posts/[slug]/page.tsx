@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { getPosts } from "@/app/posts/utils";
 import { renderMarkdoc } from "@/app/posts/markdoc";
+import { Nav } from "@/app/posts/Nav";
 
 export default async function Post({ params }: { params: { slug: string } }) {
   const posts = await getPosts();
