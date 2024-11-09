@@ -7,7 +7,7 @@ Alright everybody, buckle up. Here it is. Literally the most delicious banana br
 ## Ingredients
 
 - 380 g / 3 very ripe medium bananas, mashed
-- 125 g / 0.5 cups sugar
+- 175 g / 0.88 cups sugar
 - 2 eggs
 - 110 g / 0.5 cups oil
 - 1 tsp vanilla
